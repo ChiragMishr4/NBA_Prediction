@@ -23,7 +23,7 @@ def register_callbacks(app):
     Register all callbacks for the Dash app.
     """
 
-    # ✅ Callback for the Predict button (Home Page)
+    # Callback for the Predict button (Home Page)
     @app.callback(
         Output("prediction_output", "children"),
         Input("predict_button", "n_clicks"),  # Button triggers the callback
@@ -42,7 +42,7 @@ def register_callbacks(app):
 
         return f"Predicted Three-Point Accuracy: {prediction:.2f}%"
 
-    # ✅ Callback for the Compare button (Player Comparison Page)
+    # Callback for the Compare button (Player Comparison Page)
     @app.callback(
         Output("comparison_output", "children"),
         Input("compare_button", "n_clicks"),  # Button triggers the callback
