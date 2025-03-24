@@ -21,7 +21,7 @@ compare_layout = dbc.Container([
             dcc.Dropdown(id="player_2", options=[{"label": p, "value": p} for p in df["Player"]], value=df["Player"].iloc[1]),
             
             dbc.Button("Compare", id="compare_button", color="primary", className="mt-3"),
-            html.Div(id="comparison_output", className="fw-bold text-primary mt-3")
+            dcc.Graph(id="compare_output", style={"height": "400px"})  # Output graph
         ], width=6, className="mx-auto")
     ], className="justify-content-center mt-4"),
     
